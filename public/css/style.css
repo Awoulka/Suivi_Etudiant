@@ -1,0 +1,62 @@
+.showback{
+background:#ffffff;
+padding:15px;
+margin-bottom:15px;
+box-shadow:1px 2px 2px 3px #aab2bd;
+} 
+.T{
+  margin-top: 0rem;
+}
+.top {
+    padding-top: 15px;
+  }
+  .size{
+    width: 100%;
+  }
+  .f2{
+    float: right;
+  }
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  padding: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+}
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 10px;
+  top: 0; 
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.x{}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}

@@ -1,0 +1,1 @@
+var base_url = window.location.origin + '/' + window.location.pathname.slipt('/')[1] + '/';
