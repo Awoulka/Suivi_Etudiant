@@ -50,136 +50,64 @@
                 <a class="navbar-brand hidden" href="<?php  echo base_url();?>choix/consult_salle">SE</a>
             </div>
 
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
+           <div id="main-menu"  class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <!--li class="active">
-                        <a href="<?php  echo base_url();?>choix/dashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                    </li-->
-                    <h3 class="menu-title">Consultation</h3><!-- /.menu-title -->
+                    <li class="active">
+                        <a href="<?php echo base_url('admin/admin/admin_page') ?>"style="color:black;"> <i class="menu-icon fa fa-dashboard"></i>ADMINISTRATEUR </a>
+                    </li>
+                    <h3 class="menu-title">Personnel</h3><!-- /.menu-title -->
                     <li>
+                        <a href="<?php echo base_url('admin/admin/') ?>add_user"> <i class="menu-icon ti-user " ?></i>Ajouter personnel </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/admin/') ?>user_page"> <i class="menu-icon ti-list " ?></i>Liste personnels</a>
+                    </li>
+                   <h3 class="menu-title">Comptes</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="<?php echo base_url('admin/admin/') ?>add_compte"> <i class="menu-icon ti-user " ?></i>Ajouter compte </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/admin/') ?>compte_page"> <i class="menu-icon ti-list " ?></i>Liste comptes</a>
+                    </li>
+                    <h3 class="menu-title">Paramétrage du système</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Emplois du temps</a>
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-gear"></i>Paramètres</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-th"></i><a href="<?php  echo base_url();?>choix/consult_salle">Salles</a></li>
-                            <li><i class="fa fa-th"></i><a href="<?php  echo base_url();?>choix/consult_Enseignant">Enseignants</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/faculte_page') ?>">facultés</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/mention') ?>">Mentions</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/parcour') ?>">Parcours</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/cycle') ?>">Cycles</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/niveau') ?>">Niveaux</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/ue') ?>">UE</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/poste_page') ?>">Années académiques</a></li>
+
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/poste_page') ?>">Postes</a></li>
+
+                           <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/grade') ?>">Grades</a></li> -->
+                           <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/') ?>role">Roles</a></li> -->
+                           <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/') ?>service">Services</a></li> -->
+                            <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/departement') ?>">Departements</a></li> -->
+                                                   
+                          
+                          
+
+                          <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/salle') ?>">Salle</a></li> -->
+                          <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url('admin/admin/plage') ?>">Plages</a></li> -->
+                          <li><i class="menu-icon fa fa-gear"></i><a href="<?php echo base_url('admin/admin/etablissement') ?>">Etablissement</a></li>
+                                                    
                         </ul>
-                   
-                    
-
-                     <?php 
-
-            //print_r($this->session->poste);
-            
-            foreach ($this->session->poste as  $value) {
-                // code...
-            
-                     if ($value->nom_poste=="DFI"){
-            ?>
-
-                  <h3 class="menu-title">Etat des Heures</h3><!-- /.menu-title -->
-                            <li><a href="<?php  echo base_url();?>Excel_export/etat"> <i class="menu-icon fa fa-columns"></i>Heures programmées</a></li>
-                            <li><a href="<?php  echo base_url();?>Excel_export/etat"> <i class="menu-icon fa fa-columns"></i>Heures effectifs</a></li>
-                        
-            <?php 
-
-                    }  
-                    else{
-                         ?>
-
-                        <li>
-                        <a href="<?php  echo base_url();?>Excel_export/etat"> <i class="menu-icon fa fa-columns"></i>Etat des Heures</a>
                     </li>
 
-
-             <?php
-
-                    }
-
-                } 
-             ?>
-                    
-
-          <!--   <?php 
-
-                     if ($this->session->poste=="RP"){?>
-
-                
-                 <h3 class='menu-title'>Edition</h3>
-                  <li>
-                        <a  href="<?php  echo base_url();?>choix/edition"><i class='menu-icon fa fa-edit'></i>Emplois du Temps</a>
-                    </li>
-        
-                    
-            <?php 
-
-                     }
-             ?>
- -->
-
-             <?php 
-                    foreach ($this->session->poste as  $value) {
-                
-                     if ($value->nom_poste=="RP"){?>
-
-                
-                 <h3 class='menu-title'>Edition</h3>
-                  <li>
-                        <a  href="<?php  echo base_url();?>choix/edition"><i class='menu-icon fa fa-edit'></i>Emplois du Temps</a>
-                    </li>
-        
-                    <!--li class="menu-item-has-children dropdown">
-                        <a  href="<?php  echo base_url();?>Enregistrement/plg"><i class='menu-icon fa fa-edit'></i>Plages</a>
-                        
-                    </li-->
-            <?php 
-
-                     }
-                 }
-             ?>
-        
-
-            <!-- <?php 
-
-                     if ($this->session->poste=="CD"){
-            ?>
-
-                  <li>
-                        <a  href="<?php  echo base_url();?>choix/notif"> <i class='menu-icon fa fa-bell'></i>Notifications</a>
-                    </li>
-            <?php 
-
-                    }   
-             ?> -->
-                    
-                      <?php 
-
-            //print_r($this->session->poste);
-            
-            foreach ($this->session->poste as  $value) {
-                // code...
-            
-                     if ($value->nom_poste=="CD"){
-            ?>
-
-                  <li>
-                        <a  href="<?php  echo base_url();?>choix/notif"> <i class='menu-icon fa fa-bell'></i>Notifications</a>
-                    </li>
-            <?php 
-
-                    }  
-
-                } 
-             ?>
-                    
-
-                   
-                    
-                </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
     </aside><!-- /#left-panel -->
-
-    <!-- Left Panel -->
 
     <!-- Right Panel -->
 
@@ -215,10 +143,13 @@
 
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right"></br>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>    <?php  echo $this->session->nom_personnel;?></a>
+                        
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" color:blue; margin-right: 10px;">
+                        <i class="fa fa-user-circle" ></i> <?php  echo $this->session->nom_personnel;?></a>
+                        </a>
 
                         <div class="user-menu dropdown-menu">
-                         <a style="float: right;" class="" href="<?php  echo base_url();?>index.php/authentification/deconnexion"><i class="fa fa-power-off"></i>  Deconexion</a>
+                         <a style=" color:red; margin-right: 10px;" class="" href="<?php  echo base_url();?>index.php/authentification/deconnexion"><i class="fa fa-power-off"></i>  Deconexion</a>
 
                            
                         </div>
